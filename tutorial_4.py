@@ -31,6 +31,15 @@ def others(m1, m2):
     print(dev2)
 
 
+def logic_demo(m1, m2):
+    dst1 = cv.bitwise_and(m1, m2)
+    cv.imshow("bitwise_and", dst1)
+    dst2 = cv.bitwise_or(m1, m2)
+    cv.imshow("bitwise_or", dst2)
+    dst3 = cv.bitwise_not(m1)
+    cv.imshow("bitwise_not", dst3)
+    dst4 = cv.bitwise_xor(m1, m2)
+    cv.imshow("bitwise_xor", dst4)
 
 
 print("----------Hello Python-------------")
@@ -47,7 +56,8 @@ cv.imshow("image2", src2)
 # subtract_demo(src1, src2)
 # divide_demo(src1, src2)
 # multiply_demo(src1, src2)
-others(src1, src2)
+# others(src1, src2)
+logic_demo(src1, src2)
 cv.waitKey(0)
 
 cv.destroyAllWindows()
